@@ -6,10 +6,12 @@ class HomeBinding extends GetItBinding {
   @override
   Future<void> onInit() async {
     GetIt.instance.registerSingleton<HomeController>(HomeController());
+    super.onInit();
   }
 
   @override
   Future<void> onDispose() async {
     GetIt.instance.unregister<HomeController>();
+    super.onDispose();
   }
 }
