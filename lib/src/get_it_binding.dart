@@ -1,7 +1,11 @@
-import 'dart:ui';
+import 'dart:developer' as developer;
 
-class GetItBinding {
-  final VoidCallback onInit;
-  final VoidCallback onDispose;
-  const GetItBinding({required this.onInit, required this.onDispose});
+abstract class GetItBinding {
+  Future<void> onInit() async {
+    developer.log('onInit: $runtimeType', name: 'GetItBinding');
+  }
+
+  Future<void> onDispose() async {
+    developer.log('onDispose: $runtimeType', name: 'GetItBinding');
+  }
 }

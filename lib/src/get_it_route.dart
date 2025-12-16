@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:get_it_binding/src/get_it_binding.dart';
 
 class GetItRoute extends StatefulWidget {
-  final Widget child;
   final GetItBinding? binding;
   final List<GetItBinding> bindings;
+  final Widget page;
 
   const GetItRoute({
     super.key,
-    required this.child,
     this.binding,
     this.bindings = const [],
+    required this.page,
   });
 
   @override
@@ -37,5 +37,5 @@ class _GetItRouteState extends State<GetItRoute> {
   }
 
   @override
-  Widget build(BuildContext context) => widget.child;
+  Widget build(BuildContext context) => widget.page;
 }
