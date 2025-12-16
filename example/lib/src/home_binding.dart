@@ -1,4 +1,4 @@
-import 'package:example/home_controller.dart';
+import 'package:example/src/home_controller.dart';
 import 'package:get_it/get_it.dart';
 import 'package:get_it_binding/get_it_binding.dart';
 

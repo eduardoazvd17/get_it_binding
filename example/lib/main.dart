@@ -1,5 +1,5 @@
-import 'package:example/home_binding.dart';
-import 'package:example/home_page.dart';
+import 'package:example/src/home_binding.dart';
+import 'package:example/src/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it_binding/get_it_binding.dart';
 
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'GetItBinding Example',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
       initialRoute: '/home',
       routes: {

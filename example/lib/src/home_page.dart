@@ -1,4 +1,4 @@
-import 'package:example/home_controller.dart';
+import 'package:example/src/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 
@@ -20,8 +20,13 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: .center,
           children: [
-            Text(
-              'You have pushed the button this many times: ${controller.counter.toString()}',
+            ListenableBuilder(
+              listenable: controller,
+              builder: (context, child) {
+                return Text(
+                  'You have pushed the button this many times: ${controller.counter.toString()}',
+                );
+              },
             ),
           ],
         ),
