@@ -1,3 +1,5 @@
+import 'dart:developer' as developer;
+
 import 'package:flutter/material.dart';
 import 'package:get_it_binding/src/get_it_binding.dart';
 
@@ -20,19 +22,47 @@ class GetItRoute extends StatefulWidget {
 class _GetItRouteState extends State<GetItRoute> {
   @override
   void initState() {
-    widget.binding?.onInit();
-    for (final binding in widget.bindings) {
-      binding.onInit();
-    }
+    _initBindings();
     super.initState();
   }
 
   @override
   void dispose() {
     super.dispose();
-    widget.binding?.onDispose();
+    _disposeBindings();
+  }
+
+  void _initBindings() {
+    if (widget.binding != null) {
+      widget.binding?.onInit();
+      developer.log(
+        'onInit: ${widget.binding?.runtimeType}',
+        name: 'GetItBinding',
+      );
+    }
+    for (final binding in widget.bindings) {
+      binding.onInit();
+      developer.log(
+        'onInit: ${widget.binding?.runtimeType}',
+        name: 'GetItBinding',
+      );
+    }
+  }
+
+  void _disposeBindings() {
+    if (widget.binding != null) {
+      widget.binding?.onDispose();
+      developer.log(
+        'onDispose: ${widget.binding?.runtimeType}',
+        name: 'GetItBinding',
+      );
+    }
     for (final binding in widget.bindings) {
       binding.onDispose();
+      developer.log(
+        'onDispose: ${widget.binding?.runtimeType}',
+        name: 'GetItBinding',
+      );
     }
   }
 
