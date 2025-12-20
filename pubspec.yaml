@@ -1,7 +1,7 @@
-name: get_it_binding
+name: easy_binding
 description: "A package for binding get_it to a widget or route."
 version: 0.0.1
-homepage: https://github.com/eduardoazvd17/get_it_binding
+homepage: https://github.com/eduardoazvd17/easy_binding
 
 environment:
   sdk: ^3.10.0

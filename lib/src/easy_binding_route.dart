@@ -1,14 +1,16 @@
 import 'dart:developer' as developer;
 
 import 'package:flutter/material.dart';
-import 'package:get_it_binding/src/get_it_binding.dart';
+import 'package:easy_binding/src/easy_binding.dart';
 
-class GetItRoute extends StatefulWidget {
-  final GetItBinding? binding;
-  final List<GetItBinding> bindings;
+import '../easy_binding.dart';
+
+class EasyBindingRoute extends StatefulWidget {
+  final EasyBinding? binding;
+  final List<EasyBinding> bindings;
   final Widget page;
 
-  const GetItRoute({
+  const EasyBindingRoute({
     super.key,
     this.binding,
     this.bindings = const [],
@@ -16,10 +18,10 @@ class GetItRoute extends StatefulWidget {
   });
 
   @override
-  State<GetItRoute> createState() => _GetItRouteState();
+  State<EasyBindingRoute> createState() => _GetItRouteState();
 }
 
-class _GetItRouteState extends State<GetItRoute> {
+class _GetItRouteState extends State<EasyBindingRoute> {
   @override
   void initState() {
     _initBindings();

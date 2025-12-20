@@ -18,7 +18,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(title: const Text('Home')),
       body: Center(
         child: Column(
-          mainAxisAlignment: .center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ListenableBuilder(
               listenable: controller,
